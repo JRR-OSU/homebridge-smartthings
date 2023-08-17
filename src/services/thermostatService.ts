@@ -218,7 +218,7 @@ export class ThermostatService extends BaseService {
       temp = this.deviceStatus.status.thermostatHeatingSetpoint.heatingSetpoint.value;
     }
     if (temp === null || temp === undefined) {
-      throw(new this.platform.api.hap.HapStatusError(this.platform.api.hap.HAPStatus.RESOURCE_DOES_NOT_EXIST));
+      //throw(new this.platform.api.hap.HapStatusError(this.platform.api.hap.HAPStatus.RESOURCE_DOES_NOT_EXIST));
     }
     if (this.units === 'F') {
       temp = (temp - 32) * (5 / 9); // Convert to C
